@@ -14,13 +14,11 @@
         <h2>To-Do List</h2>
         <div class="row">
             <input type="text" id="input-box" placeholder="Add your task:">
-            <button ondblclick="addTask()">Add</button>
+            <button onclick="addTask()">Add</button>
 
         </div>
         <div class="row">
-            <input type="text" x-webkit-speech id="input-box2" placeholder="Press the microphone and speak out your task:">
-            <button>Record</button>
-            
+            <button id="record-btn">Start Voice Input</button> <!-- Updated button for clarity -->
         </div>
         <ul id="list-container">
           <!---  <li class="checked">Task1</li>
