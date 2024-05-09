@@ -61,4 +61,5 @@ function startSpeechRecognition() {
     } else {
         alert('Speech recognition is not supported by this browser.');
     }
+    
 }
