@@ -17,8 +17,11 @@
             <button onclick="addTask()">Add</button>
 
         </div>
-        <div class="row2">
-            <button id="voice-btn">Start Voice Input</button> <!-- Updated button for clarity -->
+        <div class="reminder-app">
+            <h2>Daily Reminders</h2>
+            <input type="text" id="speech-input" placeholder="Speak your reminder...">
+            <button onclick="startSpeechRecognition()">Set Reminder</button>
+            <div id="reminders"></div>
         </div>
         <ul id="list-container">
           <!---  <li class="checked">Task1</li>
@@ -26,6 +29,7 @@
             <li>Task3</li> -->
         </ul>
     </div>
+
 </div>
 <script src="script.js"></script>
 </body>
