@@ -1,6 +1,7 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+
 function addTask(){
     if (inputBox.value === ''){
     alert("You must write something!");
@@ -35,3 +36,29 @@ function showTask(){
     listContainer.innerHTML = localStorage.getItem("data")
 }
 showTask();
+
+function startSpeechRecognition() {
+    const speechInput = document.getElementById('speech-input');
+
+    // Check if browser supports SpeechRecognition
+    if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'en-US';
+
+        // Start speech recognition
+        recognition.start();
+
+        // Event listener for when speech is recognized
+        recognition.onresult = function(event) {
+            const transcript = event.results[0][0].transcript;
+            speechInput.value = transcript;
+        };
+
+        // Event listener for errors
+        recognition.onerror = function(event) {
+            console.error('Speech recognition error occurred:', event.error);
+        };
+    } else {
+        alert('Speech recognition is not supported by this browser.');
+    }
+}

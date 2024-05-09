@@ -17,11 +17,10 @@
             <button onclick="addTask()">Add</button>
 
         </div>
-        <div class="reminder-app">
-            <h2>Daily Reminders</h2>
-            <input type="text" id="speech-input" placeholder="Speak your reminder...">
-            <button onclick="startSpeechRecognition()">Set Reminder</button>
-            <div id="reminders"></div>
+        <div>
+            <h2>Speech Recognition</h2>
+            <input type="text" id="speech-input" placeholder="Spoken text will appear here" readonly>
+            <button onclick="startSpeechRecognition()">Start Listening</button>
         </div>
         <ul id="list-container">
           <!---  <li class="checked">Task1</li>
