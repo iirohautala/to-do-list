@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-
-<div class="container">
-    <div class="todo-app">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
         <h2>To-Do List</h2>
         <div class="row">
-            <input type="text" id="input-box" placeholder="Add your task:">
-            <button onclick="addTask()">Add</button>
-
+          <input type="text" id="input-box" placeholder="Add your task:" />
+          <button onclick="addTask()">Add</button>
         </div>
         <h2>Speech Recognition</h2>
         <div class="row2">
-            <input type="text" id="speech-input" placeholder="Spoken text will appear here" readonly>
-            <button onclick="startSpeechRecognition()">Start Listening</button>
+          <input
+            type="text"
+            id="speech-input"
+            placeholder="Spoken text will appear here"
+            style="height: 60px"
+            readonly
+          />
         </div>
+        <button onclick="startSpeechRecognition()">
+          Record your microphone to create a reminder for the day
+        </button>
         <ul id="list-container">
           <!---  <li class="checked">Task1</li>
             <li>Task2</li>
             <li>Task3</li> -->
         </ul>
+      </div>
     </div>
-
-</div>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
